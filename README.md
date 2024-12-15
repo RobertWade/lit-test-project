@@ -23,8 +23,9 @@ This project demonstrates the use of web components with Lit, bundled using Vite
 │   ├── src/         # Source code
 │   │   ├── components/  # Web components
 │   │   ├── views/      # Page components
-│   │   ├── router/     # SPA routing
-│   │   ├── store/      # State management
+│   │   ├── core/       # Core functionality
+│   │   │   ├── router/ # SPA routing
+│   │   │   └── store/  # State management
 │   │   └── shared/     # Utilities
 │   ├── public/     # Static files
 │   └── dist/       # Build output
