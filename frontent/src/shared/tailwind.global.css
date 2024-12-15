@@ -1,0 +1,17 @@
+:root {
+    --primary-color: #1d4ed8; /* Beispiel für eine Primärfarbe */
+    --secondary-color: #9333ea; /* Beispiel für eine Sekundärfarbe */
+  }
+  
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  body {
+    @apply pt-24;
+  }
+  
+
+  h1{
+    @apply text-4xl;
+  }

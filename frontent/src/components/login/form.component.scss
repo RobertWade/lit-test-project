@@ -1,0 +1,11 @@
+.form {
+  @apply max-w-[400px] mx-auto grid gap-4;
+}
+
+input {
+  @apply border border-gray-300 rounded-md w-full p-2;
+}
+
+button {
+  @apply bg-[var(--primary-color)] text-white rounded-md p-2;
+}

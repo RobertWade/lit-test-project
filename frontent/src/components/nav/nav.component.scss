@@ -1,0 +1,19 @@
+nav{
+  @apply fixed top-0 shadow-sm w-screen py-4;
+}
+
+:host {
+  display: block;
+}
+nav {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.menu-button {
+  background-color: #1f2937;
+  color: #9ca3af;
+}
+.menu-button:hover {
+  color: white;
+  background-color: #374151;
+}
