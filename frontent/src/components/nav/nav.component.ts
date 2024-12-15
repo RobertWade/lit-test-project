@@ -46,7 +46,9 @@ export class NavComponent extends TailwindElement(style) {
         <app-link to="/">
         Home
         </app-link>
-          <!-- <a href="/about" @click=${this.navigate}>About</a> -->
+        <app-link to="/about">
+        About
+        </app-link>
         </div>
           <a href="/" @click=${this.userInfo ? null : this.navigate}>
             ${this.loggedIn ? `Willkommen, ${this.userInfo.name}` : 'Login'}

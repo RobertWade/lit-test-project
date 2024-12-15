@@ -1,4 +1,4 @@
-import { store } from '../store/store';
+import { store } from "../store/store"
 
 type Route = {
     path: string;
@@ -8,9 +8,19 @@ type Route = {
 
 class Router {
     private routes: Route[] = [];
+    private listeners: Set<() => void> = new Set();
 
     constructor() {
         window.addEventListener('popstate', () => this.handleLocationChange());
+    }
+
+    public subscribe(callback: () => void) {
+        this.listeners.add(callback);
+        return () => this.listeners.delete(callback);
+    }
+
+    private notifyListeners() {
+        this.listeners.forEach(listener => listener());
     }
 
     public setRoutes(routes: Route[]) {
@@ -25,11 +35,13 @@ class Router {
             // Route protection check
             if (route.protected && !store.getState().loggedIn) {
                 this.navigate('/');
+                this.notifyListeners();
                 return;
             }
             const outlet = document.getElementById('outlet');
             if (outlet) {
                 outlet.innerHTML = `<${route.component}></${route.component}>`;
+                this.notifyListeners();
             }
         }
     }
