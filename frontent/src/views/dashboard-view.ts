@@ -1,7 +1,7 @@
 import { html } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { TailwindElement } from "../shared/tailwind.element";
-import { store } from "../store/store";
+import { store } from "../core/store/store";
 
 @customElement('dashboard-view')
 export class DashboardView extends TailwindElement() {

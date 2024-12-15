@@ -1,8 +1,8 @@
 import { html } from "lit";
 import { customElement, state, property } from "lit/decorators.js";
 import { TailwindElement } from "../../shared/tailwind.element";
-import { store } from "../../store/store";
-import { router } from "../../router/router";
+import { store } from "../../core/store/store";
+import { router } from "../../core/router/router";
 
 
 import style from "./form.component.scss?inline";
