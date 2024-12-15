@@ -51,7 +51,7 @@ export class NavComponent extends TailwindElement(style) {
         </app-link>
         </div>
           <a href="/" @click=${this.userInfo ? null : this.navigate}>
-            ${this.loggedIn ? `Willkommen, ${this.userInfo.name}` : 'Login'}
+            ${this.loggedIn ? `Willkommen, ${this.userInfo.name}` : ''}
           </a>
       </div>
     </nav>
